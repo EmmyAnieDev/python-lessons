@@ -226,5 +226,5 @@ my_list = [20, 4, 6 , 7 , 3, 6 , 8 , 9, 2, 6]
 double_list = [num * 2 for num in my_list]
 print(double_list)
 
-squared_list = [num // 2 for num in my_list if num % 2 == 0]
+squared_list = [num ** 2 for num in my_list if num % 2 == 0]
 print(squared_list)
