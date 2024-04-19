@@ -74,15 +74,27 @@
 # print(result)
 
 # numbers = [1,2,3,4,5,6,7,8,9,10]
-# print(numbers)
-#
-# squared_even_numbers = []
+
 # for nums in numbers:
+#     squared_even_numbers = []
 #     if nums % 2 == 0:
 #         squared_nums = nums ** 2
 #         squared_even_numbers.append(squared_nums)
-#
-#
+
+
 # print(squared_even_numbers)
 
+
+#                                                                Using a function
 my_list = [2, 3, 5, 6, 7, 6, 9]
+
+squared_even_numbers = []
+
+def square(my_list):
+    for nums in my_list:
+        if (nums ** 2) %  2 == 0:
+            squared_nums = nums(nums ** 2)
+            squared_even_numbers.append(squared_nums)
+    return squared_even_numbers
+        
+print(square(my_list))

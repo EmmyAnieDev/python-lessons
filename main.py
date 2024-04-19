@@ -213,3 +213,18 @@
 # car_2 = Car('Tesla', 'Electric', 'USA')
 #
 # print(car_2.name)
+
+
+
+#                                             LIST COMPREHENSION
+#              This gives us alternative ways to construct list or dictionaries based on other collections.
+
+my_list = [20, 4, 6 , 7 , 3, 6 , 8 , 9, 2, 6]
+
+# your_list = [what you want to return/ output, what you want to circle/ loop through]
+# your_list = [what you want to return/ output, what you want to circle/ loop through, any conditions you want to carry]
+double_list = [num * 2 for num in my_list]
+print(double_list)
+
+squared_list = [num // 2 for num in my_list if num % 2 == 0]
+print(squared_list)
