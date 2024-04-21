@@ -85,16 +85,34 @@
 # print(squared_even_numbers)
 
 
-#                                                                Using a function
-my_list = [2, 3, 5, 6, 7, 6, 9]
+#                                                            Using a function
+# my_list = [2, 3, 5, 6, 7, 6, 9]
 
-squared_even_numbers = []
+# squared_even_numbers = []
 
-def square(my_list):
-    for nums in my_list:
-        if (nums ** 2) %  2 == 0:
-            squared_nums = nums(nums ** 2)
-            squared_even_numbers.append(squared_nums)
-    return squared_even_numbers
+# def square(my_list):
+#     for nums in my_list:
+#         if nums % 2 == 0:
+#             squared_nums = nums ** 2
+#             squared_even_numbers.append(squared_nums)
+#     return squared_even_numbers
         
-print(square(my_list))
+# print(square(my_list))
+
+
+#                               filtering
+
+#my_list = ['A', 'C', 'F', 'F', 'D', 'B', 'E', 'D', 'F']
+
+# pass_list = []
+# for item in my_list:
+#     if item != 'F':
+#         pass_list.append(item)
+# print(pass_list)
+
+# pass_list = [item for item in my_list if item != 'F']
+# print(pass_list)
+
+my_tuple = (1, 2, 3)
+another_tuple = tuple([4, 5, 6])
+print(tuple)
