@@ -220,7 +220,7 @@
 #                                             LIST COMPREHENSION
 #              This gives us alternative ways to construct list or dictionaries based on other collections.
 
-my_list = [20, 4, 6 , 7 , 3, 6 , 8 , 9, 2, 6]
+# my_list = [20, 4, 6, 7, 3, 6, 8, 9, 2, 6]
 
 # # your_list = [what you want to return/ output, what you want to circle/ loop through]
 # # your_list = [what you want to return/ output, what you want to circle/ loop through, any conditions you want to carry]
@@ -242,10 +242,11 @@ my_list = [20, 4, 6 , 7 , 3, 6 , 8 , 9, 2, 6]
 #   Filters is an easy way to take a collection and filters out some of it values based on a function result and this give us a new filter collection
 # my_list = ['A', 'C', 'F', 'F', 'D', 'B', 'E', 'D', 'F']
 
-# def remoeve_fails(passed):
+# def remove_fails(passed):
 #     return passed != 'F'
 
-# passed_list = list(filter(remoeve_fails, my_list))
+# new_list/string = list(filter(testing_function, list))
+# passed_list = list(filter(remove_fails, my_list))
 # print(passed_list)
 
 
@@ -253,9 +254,13 @@ my_list = [20, 4, 6 , 7 , 3, 6 , 8 , 9, 2, 6]
 #                                            LAMBDAS
 #   Lambda functions are short, nameless functions used for quick tasks in Python, and are used just once.
 
-nums = [1, 2, 3, 4 ,5 ,6 ,7, 8, 9]
+# nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#
+# squared_list = list(map(lambda n: n ** 2, nums))
+# even_numbers = list(filter(lambda x: x % 2 == 0, nums))
+# print(squared_list)
+# print(even_numbers)
 
-squared_list = list(map(lambda n: n ** 2, nums))
-even_numbers = list(filter(lambda x: x % 2 == 0, nums))
-print(squared_list)
-print(even_numbers)
+
+
+#                                  DECORATORS

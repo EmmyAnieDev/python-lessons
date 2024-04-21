@@ -112,7 +112,3 @@
 
 # pass_list = [item for item in my_list if item != 'F']
 # print(pass_list)
-
-my_tuple = (1, 2, 3)
-another_tuple = tuple([4, 5, 6])
-print(tuple)
