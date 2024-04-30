@@ -129,6 +129,14 @@
 #     print('MacOS not found.')
 
 
+#                                  TUPLES
+# TUPLES are immutable list that can not be modified or changed.   so we use tuples when we want a fixed list.
+# my_tuples = (10, 5, 3, 6, 7, 3)
+#
+# print(my_tuples[0])
+# my_tuples[3] = 50   #  this will throw error.
+# print(my_tuples)
+
 
 
 #                                                                SETS & SORTING
@@ -220,7 +228,7 @@
 #                                             LIST COMPREHENSION
 #              This gives us alternative ways to construct list or dictionaries based on other collections.
 
-# my_list = [20, 4, 6, 7, 3, 6, 8, 9, 2, 6]
+#my_list = [20, 4, 6, 7, 3, 6, 8, 9, 2, 6]
 
 # # your_list = [what you want to return/ output, what you want to circle/ loop through]
 # # your_list = [what you want to return/ output, what you want to circle/ loop through, any conditions you want to carry]
@@ -236,18 +244,46 @@
 
 # print(checking())
 
+# list_comp = [num ** 2 if num % 2 == 0 else num for num in my_list]  # returns all  numbers but square only even numbers
+#list_comp = [num + 1 if num % 2 == 1 else num for num in my_list]  # returns all  numbers but make odd numbers even
+#print(list_comp)
+
 
 
 #                                              FILTERS
 #   Filters is an easy way to take a collection and filters out some of it values based on a function result and this give us a new filter collection
 # my_list = ['A', 'C', 'F', 'F', 'D', 'B', 'E', 'D', 'F']
-
+#
 # def remove_fails(passed):
 #     return passed != 'F'
-
-# new_list/string = list(filter(testing_function, list))
+#
+# #new_list/string = list(filter(testing_function, list))
 # passed_list = list(filter(remove_fails, my_list))
 # print(passed_list)
+
+
+
+#                                           MAPS
+# Takes in a function as first params and iterable as second params. then return an iterator that applies the function to every item of the iterable
+
+# def make_even(x):               # returns all  numbers but square only even numbers
+#     if x & 2 == 1:
+#         return x + 1
+#     else:
+#         return x
+#
+# def square(x):
+#     return x ** 2
+#
+#
+# numbers = [1, 2, 3, 4, 5, 7, 3, 9, 0, 2]
+#
+# # Use map() to apply the square function to each number in the list
+# square_list = list(map(square, numbers))
+# make_even_list = list(map(make_even, numbers))
+#
+# print(square_list)
+# print(make_even_list)
 
 
 
@@ -260,6 +296,7 @@
 # even_numbers = list(filter(lambda x: x % 2 == 0, nums))
 # print(squared_list)
 # print(even_numbers)
+
 
 
 
