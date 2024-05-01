@@ -215,12 +215,17 @@
 # MODULES:  These are python file that could be called upon, imported, and used. in this case, (the student class in the problems.py file)
 # PACKAGES:  These are collection of modules.  (instead of putting too much functionality in one module, split it out to different modules, and all of those modules will be in one package)
 
-# from cars_packages.car import Car
-#
-# car_1 = Car('Toyota', 'Petrol', 'Japan')
-# car_2 = Car('Tesla', 'Electric', 'USA')
-#
-# print(car_2.name)
+from cars_packages.car import Car
+from cars_packages.car_module_one import CarColor
+
+car_1 = Car('Toyota', 'Petrol', 'Japan')
+car_2 = Car('Tesla', 'Electric', 'USA')
+
+
+
+print(car_2.name)
+print(f'i am car_2 and all cars color are fixed as {CarColor.all_color}')
+print(car_2.drive())
 
 
 
