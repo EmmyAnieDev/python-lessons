@@ -112,3 +112,51 @@
 
 # pass_list = [item for item in my_list if item != 'F']
 # print(pass_list)
+
+
+
+#                       Random
+# import random
+# #
+# # random_side = random.randint(0, 1)
+# #
+# # if random_side == 1:
+# #     print("you won")
+# # else:
+# #     print("you lost")
+#
+# people = ["Emmy", "John", "Doe", "Jane"]
+#
+# random_person = random.choice(people)
+# print(random_person + " is going to buy the meal today")
+
+
+#                                     FOR LOOP
+# students_heights = [180, 124, 165, 173, 189, 169, 146, 178]
+#
+# sum_of_students_height = 0
+# for item in students_heights:
+#     sum_of_students_height += item
+# print(sum_of_students_height)
+#
+# average_height = sum_of_students_height // len(students_heights)
+# print(average_height)
+
+
+# sum_of_students_height = sum(students_heights)
+# print(sum_of_students_height)
+#
+# average_height = sum_of_students_height // len(students_heights)
+#
+# print(average_height)
+
+
+for number in range(1, 100 + 1):
+    if number % 3 == 0:
+        print('Fuzz')
+    elif number % 5 == 0:
+        print('Buzz')
+    elif number % 3 == 0 and number % 5 == 0:
+        print('FizzBuzz')
+    else:
+        print(number)
