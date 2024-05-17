@@ -112,3 +112,16 @@
 
 # pass_list = [item for item in my_list if item != 'F']
 # print(pass_list)
+
+result = 25
+
+if result < 18.5:
+    print('person is under weight')
+elif result < 25:
+    print('person is normal weight')
+elif result < 30:
+    print('person is slightly overweight')
+elif result < 35:
+    print('person is obese')
+else:
+    print('person is clinically obese')
