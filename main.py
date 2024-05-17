@@ -86,12 +86,13 @@
 # for n in range(0,10,2):
 #     print(n)
 
-# cars = ['Toyota', 'Audi', 'Subaru', 'Mercedes', 'BMW', 'Telsa', 'Ford']
+cars = ['Toyota', 'Audi', 'Subaru', 'Mercedes', 'BMW', 'Telsa', 'Ford']
 #
-# for car in range(len(cars)):
-#     print(f'index:{car} of {cars[car]}')
-#     car += 1
-# print(f'total length of cars is {len(cars)}')
+for car in range(len(cars)):
+    print(f'index:{car} is {cars[car]}')
+    car += 1
+print(f'total length of cars is {len(cars)}')
+
 
 
 #            FUNCTION         (this is  block of code that can be used and called upon later in our app)
@@ -129,6 +130,31 @@
 
 # Variable Scope(Global and Local)
 
+
+#                                  List
+# states = ['Lagos', 'Kano', 'Kaduna', 'Ogun', 'Oyo', 'Osun', 'Ondo', 'Ekiti', 'Kwara', 'Kogi', 'Benue', 'Nasarawa', 'Plateau', 'Taraba', 'Adamawa', 'Bauchi', 'Gombe', 'Yobe', 'Borno', 'Jigawa', 'Katsina', 'Zamfara', 'Sokoto', 'Kebbi', 'Niger', 'FCT']
+# print(states[10])        # used to get the 10th item in the list
+# print(states[-1])        # used to get the last item in the list   (- means counting from the end)
+# print(states[1:5])       # used to get a range of items in the list
+# print(states[:5])        # used to get all items from the beginning to the 5th item
+# states[5] = 'changed'       # used to get all items from the 5th item to the end
+# print(states[5])
+# print(len(states))         # used to get the length of the list
+# print(states.index('Kano'))    # used to get the index of an item in the list
+# states.append('Nigeria')    # used to add an item to the end of the list
+# added_state = states.insert(0, 'Nigeria')   # used to add an item to a specific index in the list
+# print(states[0])
+# states.extend(['Canada', 'London', 'Liverpool'])   # used to add multiple items to the end of the list
+# print(states)
+# states.append(['Tunisia', 'Tokyo', 'Ohio'])   # used to add a list as an item to the end of the list
+# print(states)
+
+
+fruits = ['apple', 'banana', 'cherry']
+vegetables = ['carrot', 'potato', 'onion']
+
+fruits_vegetables = [fruits, vegetables]
+print(fruits_vegetables)
 
 #                         DICTIONARIES(A MAPPING TYPE, SET OF KEY VALUE PAYS)
 # computers = {'HP':'Hardware', 'Intel':'Linux', 'AMD':'Android'}
@@ -318,6 +344,21 @@
 # print(even_numbers)
 
 
-
-
 #                                  DECORATORS
+
+
+#                                                RANDOM
+#
+# import random
+#
+# random_number = random.randint(1, 10)
+# print(random_number)
+#
+# random_number = random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+# print(random_number)
+#
+# random_number = random.random() * 100
+# print(random_number)
+#
+# love_score = random.randint(1, 100)
+# print(f'your love score is {love_score}%')
