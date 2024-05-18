@@ -1,0 +1,7 @@
+I have just written this line to the file
+I have just written this second line to the file and added here
+I have just written this line to the file
+I have just written this second line to the file and added here
+I have just added this quote line 1 to the file and added here
+I have just  added this quote line 2 to the file and added here
+I have just  added this quote line 3 to the file and added here

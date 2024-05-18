@@ -86,12 +86,12 @@
 # for n in range(0,10,2):
 #     print(n)
 
-cars = ['Toyota', 'Audi', 'Subaru', 'Mercedes', 'BMW', 'Telsa', 'Ford']
-#
-for car in range(len(cars)):
-    print(f'index:{car} is {cars[car]}')
-    car += 1
-print(f'total length of cars is {len(cars)}')
+# cars = ['Toyota', 'Audi', 'Subaru', 'Mercedes', 'BMW', 'Telsa', 'Ford']
+# #
+# for car in range(len(cars)):
+#     print(f'index:{car} is {cars[car]}')
+#     car += 1
+# print(f'total length of cars is {len(cars)}')
 
 
 
@@ -150,11 +150,11 @@ print(f'total length of cars is {len(cars)}')
 # print(states)
 
 
-fruits = ['apple', 'banana', 'cherry']
-vegetables = ['carrot', 'potato', 'onion']
-
-fruits_vegetables = [fruits, vegetables]
-print(fruits_vegetables)
+# fruits = ['apple', 'banana', 'cherry']
+# vegetables = ['carrot', 'potato', 'onion']
+#
+# fruits_vegetables = [fruits, vegetables]
+# print(fruits_vegetables)
 
 #                         DICTIONARIES(A MAPPING TYPE, SET OF KEY VALUE PAYS)
 # computers = {'HP':'Hardware', 'Intel':'Linux', 'AMD':'Android'}
@@ -348,17 +348,66 @@ print(fruits_vegetables)
 
 
 #                                                RANDOM
-#
+
 # import random
-#
+
 # random_number = random.randint(1, 10)
 # print(random_number)
-#
+
 # random_number = random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 # print(random_number)
-#
+
 # random_number = random.random() * 100
 # print(random_number)
-#
+
 # love_score = random.randint(1, 100)
 # print(f'your love score is {love_score}%')
+
+
+#                                             Reading Files
+# ipsum_file = open('text_files/ipsum_text_file.txt')
+# # for line in ipsum_file:
+# #     print(line.rstrip())
+#
+# ipsum_file.seek(0)
+# lines = ipsum_file.readlines()
+# print(lines)
+#
+# ipsum_file.seek(10)                    # find the 30th character in the files
+# file_text = ipsum_file.read(50)              #then read 20 characters from the point
+# print(file_text)
+#
+# ipsum_file.close()                         # always remember to close show it does not add anything below.
+
+# def sequence_filter(filtered_line):
+#     return filtered_line[0] != '>'
+#     #return '>' not in filtered_line
+#
+# with open('text_files/dna_text_file.txt') as dna_file:
+#     # for line in dna_file:
+#     #     if line[0] != '>':
+#     #         print(line.rstrip())
+#     filtered_line = list(filter(sequence_filter, dna_file))
+#     print(filtered_line)                               #  now we don't have to close this.
+
+
+
+#                                   Write to a File
+with open('text_files/write.txt', 'w') as write_file:          #   opening are read online so we add the ('w') to write.
+    write_file.write('I have just written this line to the file')
+    write_file.write('\nI have just written this second line to the file and added here')
+
+
+with open('text_files/write.txt', 'a') as write_file:  # we use ('a') to amend. o it does not have to delete other line in the file
+    write_file.write('\nI have just written this line to the file')
+    write_file.write('\nI have just written this second line to the file and added here')
+
+quotes = [
+    '\nI have just added this quote line 1 to the file and added here'
+    '\nI have just  added this quote line 2 to the file and added here'
+    '\nI have just  added this quote line 3 to the file and added here'
+]
+
+
+with open('text_files/write.txt', 'a') as write_file:
+    write_file.writelines(quotes)
