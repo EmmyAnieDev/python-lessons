@@ -17,6 +17,15 @@
 # result = print_max_in_list(my_list)
 # print(result)
 
+my_list = [2, 5, 8, 4, 9, 3, 8, 4, 9, 2, 1, 5, 7, 3, 5]
+
+print(2 in my_list)
+
+if 2 in my_list:
+    print('yes')
+else:
+    print('no')
+
 # my_list = [1, 2, 3, 4, 5, 5, 7, 2, 9, 0, 2, 6]
 #
 # def count_even_numbers(my_list):
@@ -114,19 +123,19 @@
 # print(pass_list)
 
 
-result = 25
-
-if result < 18.5:
-    print('person is under weight')
-elif result < 25:
-    print('person is normal weight')
-elif result < 30:
-    print('person is slightly overweight')
-elif result < 35:
-    print('person is obese')
-else:
-    print('person is clinically obese')
-
+# result = 25
+#
+# if result < 18.5:
+#     print('person is under weight')
+# elif result < 25:
+#     print('person is normal weight')
+# elif result < 30:
+#     print('person is slightly overweight')
+# elif result < 35:
+#     print('person is obese')
+# else:
+#     print('person is clinically obese')
+#
 
 
 #                       Random
@@ -164,13 +173,105 @@ else:
 #
 # print(average_height)
 
+#
+# for number in range(1, 100 + 1):
+#     if number % 3 == 0:
+#         print('Fuzz')
+#     elif number % 5 == 0:
+#         print('Buzz')
+#     elif number % 3 == 0 and number % 5 == 0:
+#         print('FizzBuzz')
+#     else:
+#         print(number)
 
-for number in range(1, 100 + 1):
-    if number % 3 == 0:
-        print('Fuzz')
-    elif number % 5 == 0:
-        print('Buzz')
-    elif number % 3 == 0 and number % 5 == 0:
-        print('FizzBuzz')
-    else:
-        print(number)
+#                                                            Random
+# import random
+#
+# word_list = ['ardvark', 'baboon', 'camel']
+#
+# chosen_word = random.choice(word_list)
+# print(f'the chosen word is: {chosen_word}')
+#
+# guess = input('Guess a letter: ').lower()
+#
+# for letter in chosen_word:
+#     if letter == guess:
+#         print(True)
+#     else:
+#         print(False)
+
+
+# #                                    While loop
+#
+# numbers = [3, 7, 4]
+# user_answer = input('Do you wanna play? (Y/n) ')
+#
+# while user_answer != 'n':
+#     user_input = int(input('guess a number in the list: '))
+#     if user_input in numbers:
+#         print('you got a number correctly!')
+#         break
+#     else:
+#         print('you chose a wrong number!')
+#     user_answer = input('Do you wanna play again? (Y/n) ')
+
+
+
+#                              Dictionaries
+#list of dictionaries
+
+# friends = [
+#     {'name': 'Ekene', 'age': 20, 'state': 'Lagos'},
+#     {'name': 'Chris', 'age': 23, 'state': 'Uyo'},
+#     {'name': 'Boss', 'age': 25, 'state': 'Texas'},
+# ]
+#
+# person = {'Ekene': 20, 'Chris': 23, 'Boss': 25}
+#
+# print(friends[2]['name'])
+# print(sum(person.values()) / len(person.values()))
+
+
+# #                                    LAMBDA
+#
+# add = lambda x, y: x + y
+# print((lambda x, y: x * y)(5, 7))
+#
+# print(add(5, 7))
+
+
+
+#                            CLASS...     INHERITANCE
+class Device:
+    def __init__(self, name, connected_by):
+        self.name = name
+        self.connected_by = connected_by
+        self.connected = True
+
+    def disconnect(self):
+        self.connected = False
+        print('Disconnected.')
+
+
+#         Add the superclass name in a parenthesis inside the subclass
+class Printer(Device):
+    def __init__(self, name, connected_by, capacity):
+        super().__init__(name, connected_by)
+        self.capacity = capacity
+        self.remaining_pages = capacity
+
+    def __str__(self):
+        return f"Printer Name: {self.name}, Connection Type: {self.connected_by}, {self.remaining_pages} remaining pages"
+
+    def print_pages(self, pages):
+        if not self.connected:
+            print('Your Printer is not connected')
+        else:
+            print(f'printing {pages} pages.')
+            self.remaining_pages -= pages
+
+my_printer = Printer('Printer', 'USB', 500)
+my_printer.print_pages(20)
+print(my_printer)
+my_printer.disconnect()
+my_printer.print_pages(20)

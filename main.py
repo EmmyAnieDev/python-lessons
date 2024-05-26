@@ -156,7 +156,9 @@
 # fruits_vegetables = [fruits, vegetables]
 # print(fruits_vegetables)
 
-#                         DICTIONARIES(A MAPPING TYPE, SET OF KEY VALUE PAYS)
+
+
+#                         DICTIONARIES(A MAPPING TYPE, SET OF KEY VALUE PAYS)    USE THE KEY TO GET THE VALUE.
 # computers = {'HP':'Hardware', 'Intel':'Linux', 'AMD':'Android'}
 # print(computers['HP'])
 #
@@ -164,10 +166,11 @@
 #     print(f'{key}: {value}')
 #
 # if 'macOS' in computers:
-#     print(computers['macOS found'])
+#     print('macOS found')
 #     print()
 # else:
 #     print('MacOS not found.')
+
 
 
 #                                  TUPLES
@@ -215,12 +218,11 @@
 #     numbers_of_student = 0
 
 
-#     def __init__(self, age, name, hobby):
-#         # INSTANCE VARIABLES/ATTRIBUTE.                  ACCESSIBLE TO ONLY INSTANCE OF THE CLASS
-#         self.age = age
-#         self.name = name
-#         self.hobby = hobby
-#         Student.numbers_of_student += 1
+    # def __init__(self, age, name, hobby):
+    #     # INSTANCE VARIABLES/ATTRIBUTE.                  ACCESSIBLE TO ONLY INSTANCE OF THE CLASS
+    #     self.age = age
+    #     self.name = name
+    #     self.hobby = hobby
 
 #     # INSTANCE METHODS                                  ACCESSIBLE TO ONLY INSTANCE OF THE CLASS
 #     def get_age_name(self):
@@ -237,6 +239,7 @@
 #         return f'the school is open {semester} every year'
             
 
+#Student.numbers_of_student += 1
 # student_1 = Student(14, 'Ade', 'Soccer')
 # student_2 = Student(15, 'Derby', 'Dancing')
 
@@ -334,6 +337,7 @@
 
 
 #                                            LAMBDAS
+#   Lambda functions does not have a name and use to return values.
 #   Lambda functions are short, nameless functions used for quick tasks in Python, and are used just once.
 
 # nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -392,22 +396,23 @@
 
 
 
+
 #                                   Write to a File
-with open('text_files/write.txt', 'w') as write_file:          #   opening are read online so we add the ('w') to write.
-    write_file.write('I have just written this line to the file')
-    write_file.write('\nI have just written this second line to the file and added here')
-
-
-with open('text_files/write.txt', 'a') as write_file:  # we use ('a') to amend. o it does not have to delete other line in the file
-    write_file.write('\nI have just written this line to the file')
-    write_file.write('\nI have just written this second line to the file and added here')
-
-quotes = [
-    '\nI have just added this quote line 1 to the file and added here'
-    '\nI have just  added this quote line 2 to the file and added here'
-    '\nI have just  added this quote line 3 to the file and added here'
-]
-
-
-with open('text_files/write.txt', 'a') as write_file:
-    write_file.writelines(quotes)
+# with open('text_files/write.txt', 'w') as write_file:          #   opening are read online so we add the ('w') to write.
+#     write_file.write('I have just written this line to the file')
+#     write_file.write('\nI have just written this second line to the file and added here')
+#
+#
+# with open('text_files/write.txt', 'a') as write_file:  # we use ('a') to amend. o it does not have to delete other line in the file
+#     write_file.write('\nI have just written this line to the file')
+#     write_file.write('\nI have just written this second line to the file and added here')
+#
+# quotes = [
+#     '\nI have just added this quote line 1 to the file and added here'
+#     '\nI have just  added this quote line 2 to the file and added here'
+#     '\nI have just  added this quote line 3 to the file and added here'
+# ]
+#
+#
+# with open('text_files/write.txt', 'a') as write_file:
+#     write_file.writelines(quotes)
